@@ -6,6 +6,27 @@
   padding-bottom: 2em;
 }
 
+.color-cod{
+  color: $cor-laranja;
+}
+
 .plano:hover {
   background: #dedede;
+}
+
+
+.git-logo{
+  @include sprite($git-logo);
+}
+
+.instalacao-Git-Windows{
+  @include sprite($instalacao-git-windows);
+}
+
+.git-bash-here{
+  @include sprite($git-bash);
+}
+
+.use-Git-from-command-prompt{
+  @include sprite($git-command-prompt);
 }

@@ -2,3 +2,19 @@
   color: $cor-base;
   border: solid 2px $cor-base;
 }
+
+.logo-nodejs{
+  @include sprite($logo-nodejs);
+}
+
+.download-nodeJS{
+  @include sprite($download-nodejs);
+}
+
+.instacao-nodejs{
+  @include sprite($instacao-nodejs);
+}
+
+.nodejs-versao{
+  @include sprite($nodejs-versao);
+}

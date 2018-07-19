@@ -1,8 +1,8 @@
 //Script for running the video
-$(document).ready(function () {
-    $(".player").mb_YTPlayer();
-    $("#name").fadeIn(800);
-});
+// $(document).ready(function () {
+//     $(".player").mb_YTPlayer();
+//     $("#name").fadeIn(800);
+// });
 
 //jQuery to collapse the navbar on scroll
 $("nav ul li a[href^='#']").on('click', function(e) {

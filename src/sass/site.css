@@ -7449,7 +7449,7 @@ header .container {
       text-decoration: underline; }
 
 .video-section .pattern-overlay {
-  background-color: rgba(5, 27, 56, 0.76);
+  background-color: rgba(5, 27, 56, 0.91);
   padding-top: 110px;
   min-height: 600px; }
 
@@ -7499,12 +7499,75 @@ header .container {
   margin: 1em 0 0 1.4em;
   padding-bottom: 2em; }
 
+.color-cod {
+  color: #f99157; }
+
 .plano:hover {
   background: #dedede; }
+
+.git-logo {
+  background-image: url(../sprite/sprite.png);
+  background-position: -1394px 0px;
+  width: 531px;
+  height: 324px; }
+
+.instalacao-Git-Windows {
+  background-image: url(../sprite/sprite.png);
+  background-position: -840px 0px;
+  width: 514px;
+  height: 402px; }
+
+.git-bash-here {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -774px;
+  width: 513px;
+  height: 402px; }
+
+.use-Git-from-command-prompt {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -332px;
+  width: 514px;
+  height: 402px; }
+
+.screen-shot {
+  background-image: url(../sprite/sprite.png);
+  background-position: -840px -442px;
+  width: 405px;
+  height: 262px; }
+
+.fluxo-git {
+  background-image: url(../sprite/sprite.png);
+  background-position: -1394px -728px;
+  width: 405px;
+  height: 262px; }
 
 #nodejs .btn-outline {
   color: #051b38;
   border: solid 2px #051b38; }
+
+.logo-nodejs {
+  background-image: url(../sprite/sprite.png);
+  background-position: -1394px -364px;
+  width: 530px;
+  height: 324px; }
+
+.download-nodeJS {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px -1216px;
+  width: 575px;
+  height: 187px; }
+
+.instacao-nodejs {
+  background-image: url(../sprite/sprite.png);
+  background-position: -553px -774px;
+  width: 495px;
+  height: 387px; }
+
+.nodejs-versao {
+  background-image: url(../sprite/sprite.png);
+  background-position: 0px 0px;
+  width: 800px;
+  height: 292px; }
 
 footer {
   padding: 1%;
