@@ -3,57 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/Download-NodeJS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/Git-bash-here.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/Instalacao-Git-Windows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/Instação-nodejs-tela-termo-licença.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/NodeJS-01-Página-do-Node.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/Use-Git-from-command-prompt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/git-logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/git.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/img-section-github/Screen-Shot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/img-section-github/fluxo-git.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/instalacao-node-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/logo-nodejs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/logo-small-git.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/nodejs-versao.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/img/versao-nodejs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/projeto.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/footer.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/global.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/normalize.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/section.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/site.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/css/video.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Download-NodeJS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Git-bash-here.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Instalacao-Git-Windows.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Instação-nodejs-tela-termo-licença.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/NodeJS-01-Página-do-Node.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Screen-Shot.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/Use-Git-from-command-prompt.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/git-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/git-logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/git.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/img-section-github/fluxo-git.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/fluxo-git.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/instalacao-node-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logo-nodejs.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/logo-nodejs.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/logo-small-git.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/nodejs-versao.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/nodejs-versao.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/versao-nodejs.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/global.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/global.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/helpers/variaveis.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/helpers/variaveis.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/modulos/section-git.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/modulos/section-git.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/modulos/section-github.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/modulos/section-github.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/modulos/section-nodejs.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/modulos/section-nodejs.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/modulos/video.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/modulos/video.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/site.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/site.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/site.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sass/site.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/sass/site.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -85,23 +35,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+            <state relative-caret-position="300">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/dist/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret column="94524" selection-start-column="94524" selection-end-column="94524" />
-              <folding>
-                <element signature="e#7814#7820#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="96">
+              <caret column="1329" selection-start-column="1329" selection-end-column="1329" />
             </state>
           </provider>
         </entry>
@@ -109,7 +56,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
+            <state relative-caret-position="615">
               <caret line="41" column="14" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="14" />
             </state>
           </provider>
@@ -207,9 +154,9 @@
         <option value="$PROJECT_DIR$/src/js/global.js" />
         <option value="$PROJECT_DIR$/src/sass/site.scss" />
         <option value="$PROJECT_DIR$/src/sass/helpers/variaveis.scss" />
-        <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/dist/index.html" />
       </list>
     </option>
   </component>
@@ -249,6 +196,24 @@
               <item name="sass-hipermidia" type="b2602c69:ProjectViewProjectNode" />
               <item name="sass-hipermidia" type="462c0819:PsiDirectoryNode" />
               <item name="dist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sass-hipermidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sass-hipermidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sass-hipermidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sass-hipermidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sass-hipermidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sass-hipermidia" type="462c0819:PsiDirectoryNode" />
+              <item name="dist" type="462c0819:PsiDirectoryNode" />
+              <item name="sprite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -325,12 +290,13 @@
       <workItem from="1531777414564" duration="5896000" />
       <workItem from="1531823519144" duration="655000" />
       <workItem from="1531952185924" duration="821000" />
-      <workItem from="1531953027680" duration="14493000" />
+      <workItem from="1531953027680" duration="15046000" />
+      <workItem from="1532122887489" duration="1182000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="136962000" />
+    <option name="totallyTimeSpent" value="138697000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,17 +309,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2256143" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2256143" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3603872" side_tool="true" weight="0.37947884" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6396128" visible="true" weight="0.35993487" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6396128" visible="true" weight="0.35993487" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -362,6 +326,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,9 +397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/img/versao-nodejs.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/versao-nodejs.png" />
     <entry file="file://$PROJECT_DIR$/src/img/fluxo-git.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -443,13 +406,7 @@
     <entry file="file://$PROJECT_DIR$/dist/img/sprite/sprite.png" />
     <entry file="file://$PROJECT_DIR$/src/css/css/site.css" />
     <entry file="file://$PROJECT_DIR$/src/css/site.css" />
-    <entry file="file://$PROJECT_DIR$/src/css/sprite.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/sprite.css" />
     <entry file="file://$PROJECT_DIR$/src/sass/site.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -510,9 +467,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/img/sprite.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/img/sprite.png" />
     <entry file="file://$PROJECT_DIR$/src/sass/modulos/section-git.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -520,11 +475,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/site.css" />
     <entry file="file://$PROJECT_DIR$/src/sass/helpers/variaveis.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -532,18 +483,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/sprite.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/sprite.png" />
     <entry file="file://$PROJECT_DIR$/src/sprite/sprite.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/img/favicon.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/sprite/favicon.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/sprite/favicon.jpg" />
     <entry file="file://$PROJECT_DIR$/src/sass/site.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -558,18 +505,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/site.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/script.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-12510">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/js/site.js" />
+    <entry file="file://$PROJECT_DIR$/dist/js/script.js" />
     <entry file="file://$PROJECT_DIR$/src/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3270">
@@ -579,7 +516,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
+        <state relative-caret-position="615">
           <caret line="41" column="14" selection-start-line="41" selection-start-column="10" selection-end-line="41" selection-end-column="14" />
         </state>
       </provider>
@@ -592,20 +529,17 @@
     <entry file="file://$PROJECT_DIR$/dist/sprite/sprite.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/index.html">
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret column="94524" selection-start-column="94524" selection-end-column="94524" />
-          <folding>
-            <element signature="e#7814#7820#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="300">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+    <entry file="file://$PROJECT_DIR$/dist/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="21" column="59" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        <state relative-caret-position="96">
+          <caret column="1329" selection-start-column="1329" selection-end-column="1329" />
         </state>
       </provider>
     </entry>
