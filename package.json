@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "gulp": "gulp"
+    "gulp": "gulp",
+    "start": "node app"
   },
   "repository": {
     "type": "git",
@@ -40,5 +41,8 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-if": "^2.0.2",
     "gulp-sequence": "^1.0.0"
+  },
+  "engines": {
+    "node": "10.4.1"
   }
 }
