@@ -25,24 +25,24 @@ const gulpSequence = require('gulp-sequence')
 
 gulp.task('copyfavicon', function() {
     return gulp.src('src/imgmin/favicon.jpg')
-        .pipe(gulp.dest('dist/img') );
-        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
+        .pipe(gulp.dest('app/img') );
+        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('app/sprite/'));
 });
 
 gulp.task('copysprite', function() {
     return gulp.src('src/sprite/*.png')
-        .pipe(gulp.dest('dist/sprite') );
-        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
+        .pipe(gulp.dest('app/sprite') );
+        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('app/sprite/'));
 });
 
 gulp.task('copycss', function() {
     return gulp.src('src/css/*.css')
-        .pipe(gulp.dest('dist/css') );
-        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
+        .pipe(gulp.dest('app/css') );
+        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('app/sprite/'));
 });
 
 gulp.task('clean', function() {
-    return gulp.src(['dist', 'src/imgmin', 'src/sprite'] )
+    return gulp.src(['app', 'src/imgmin', 'src/sprite'] )
         .pipe(clean());
 });
 
@@ -85,7 +85,7 @@ gulp.task('merge-js', function() {
         'src/js/jquery.mb.YTPlayer.js',
         'src/js/global.js'])
         .pipe(concat('script.js'))
-        .pipe(gulp.dest('dist/js'));$.sequence
+        .pipe(gulp.dest('app/js'));$.sequence
         // .pipe(uglify())
 });
 
@@ -94,19 +94,19 @@ gulp.task('merge-js', function() {
 gulp.task('html-replace', function() {
     return gulp.src('src/**/*.html')
         .pipe(htmlReplace({js: 'js/script.js'}) )
-        .pipe(gulp.dest('dist') );
+        .pipe(gulp.dest('app') );
 });
 
 gulp.task('inlinesource', function () {
     return gulp.src('./src/*.html')
         .pipe(inlinesource())
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./app'));
 });
 
 gulp.task('minify', function() {
-    return gulp.src('dist/*.html')
+    return gulp.src('app/*.html')
         .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist'));
+        .pipe(gulp.dest('app'));
 });
 
 /*-------------------  Dev  -------------------*/
@@ -136,7 +136,7 @@ gulp.task('server', function() {
 });
 
 gulp.task('zip', function(){
-    gulp.src('dist/**/*')
+    gulp.src('app/**/*')
         .pipe(zip('projeto.zip'))
-        .pipe(gulp.dest('dist'))
+        .pipe(gulp.dest('app'))
 });
