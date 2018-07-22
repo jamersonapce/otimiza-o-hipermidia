@@ -1,0 +1,16 @@
+footer{
+    @extend %background-color-base;
+    @extend %cor-branca;
+    padding: 1%;
+    font-size: 1.5em;
+}
+
+
+footer {
+    -webkit-background-size: cover;
+    background-size: cover;
+    @extend %cor-branca;
+}
+footer h2 {
+    margin-top: 7%;
+}

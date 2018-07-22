@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gulpfile.js" afterDir="false" />
-    </list>
+    <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -237,12 +235,12 @@
       <workItem from="1531952185924" duration="821000" />
       <workItem from="1531953027680" duration="15046000" />
       <workItem from="1532122887489" duration="6738000" />
-      <workItem from="1532218497476" duration="1886000" />
+      <workItem from="1532218497476" duration="2131000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="146139000" />
+    <option name="totallyTimeSpent" value="146384000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -255,7 +253,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2256143" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32899022" />

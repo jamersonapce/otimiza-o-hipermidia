@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Workflow desenvolvimento</title>
+    <link rel="shortcut icon" href="img/favicon.jpg"/>
+    <link rel="stylesheet" href="css/site.css" />
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark menu" >
+            <a class="navbar-brand " href="..">Jamerson Silva</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse menu-opcoes" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="#top">Início</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="#git">Git</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="#github">Github</a></li>
+                    <li class="nav-item"><a class="nav-link text-uppercase" href="#nodejs">NodeJs</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+<section id="top" class="content-section video-section">
+    <div class="pattern-overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 ">
+                    <h1>Workflow</h1>
+                    <h3>NodeJs | Automação de tarefas | Gulp </h3>
+                </div>
+
+                <form>
+                    <button class="btn" formaction="https://github.com/jamersonapce/sass-hipermidia">
+                        GitHub jamersonapce
+                    </button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="git" class="git">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="titulo-secao">Tutorial Git</h2>
+            </div>
+        </div>
+        <div class="row">
+            <section class="container-fluid item-section">
+                <div class="destaque">
+                    <img class="git-logo img-responsive"/>
+                    <h3> Sobre o git </h3>
+                </div>
+                <p>
+                    O git é um sistema de controle de versão que registra as alterações em um ou vários arquivos guardando
+                    o status destes ao longo do tempo para que, desta forma, você possa recuperar versões específicas posteriormente.
+                    A diferença entre o git e outros VCS é a forma como o git pensa em seus dados, o git basicamente tira uma "foto"
+                    de todos os seus arquivos e armazena uma referência àquele snapshot.
+                </p>
+                <h3> Instalação </h3>
+                <p>
+                    No site <strong><a href="https://git-scm.com/" target="_blank">https://git-scm.com/</a></strong> você pode baixar o instalador caso
+                    esteja utilzando SO windows. No linux basta executar o comando <strong>apt-get install git</strong>.
+                </p>
+                <h3> Instalando git no Windows </h3>
+                <p>
+                    Através deste link <strong><a href="msysgit.github.com" target="_blank">msysgit.github.com</a></strong>
+                    você baixa o software e dá duplo click em cima do executável para começar a instalação.
+                </p>
+                <img class="instalacao-Git-Windows img-responsive"/>
+                <p>
+                    Aqui é simples: <strong>Next, Next</strong> até chegar a essa tela:
+                </p>
+                <img class="git-bash-here img-responsive"/>
+                <p>
+                    Deixe marcado a opção <strong>Git Bash Here</strong>.<br>
+                    Com essa opção você poderá abrir o terminal do Git a partir de qualquer pasta em que estiver com o botão direito do mouse.<br>
+                    Ai vem o <strong>Next, Next</strong> de novo até essa tela:<br>
+                </p>
+                <img class="use-Git-from-command-prompt img-responsive"/>
+                <p>
+                    Selecione a segunda opção para que não existam conflitos entre as quebras de linha que o Windows coloca com as que os Sistemas Unix usam.<br>
+                    <strong>Next, Next</strong> e podemos então configurar.
+                </p>
+                <h3> Configuração do git </h3>
+                <p>
+                    Informe seus dados ao git!
+                </p>
+                <code>
+                    <kbd>1 git <span class="color-cod">config</span> --global user.name "Nome"</kbd><br>
+                    <kbd>1 git <span class="color-cod">config</span> --global user.email "email@email.com"</kbd>
+                </code>
+                <p>
+                    Pronto!<br>
+                    Existem outras configurações maneiras e você pode
+                    <a href="http://git-scm.com/book/pt-br/Primeiros-passos-Configura%C3%A7%C3%A3o-Inicial-do-Git" target="_blank">
+                        <strong>encontrá-las aqui.</strong>
+                    </a>
+                </p>
+            </section>
+        </div>
+    </div>
+</section>
+
+<section id="github">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="titulo-secao">Github</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 col-lg-offset-1 col-xs-12">
+                <div class="col-md-12 item-section">
+                    <img class="screen-shot img-responsive"/>
+                </div>
+                <div class="col-md-12 item-section">
+                    <img class="fluxo-git img-responsive"/>
+                </div>
+            </div>
+            <div class="col-lg-7 referencia" id="#github">
+                <p>
+                    O Github é um serviço web que oferece diversas funcionalidades extras aplicadas ao git. Resumindo,
+                    você poderá usar gratuitamente o github para hospedar seus projetos pessoais. Além disso,
+                    quase todos os projetos/frameworks/bibliotecas sobre desenvolvimento open source estão no github,
+                    e você pode acompanhá-los através de novas versões, contribuir informando bugs ou até mesmo enviando código e correções.
+                    Se você é desenvolvedor e ainda não tem github, você está atrasado e essa é a hora de correr atrás do prejuízo.<br>
+                    O git também é uma rede social voltada para programadores, você posta seus códigos e poderá receber contribuições de outros
+                    programadores. O serviço do github é gratuito embora existe a opção de planos pagos.<br>
+                    O cadastro é simples e rápido, basta acessa o site e informar um nome de usuário, e-mail e senha.
+                </p>
+                <dl>
+                    <dt>
+                        Github - <a href="https://github.com/" target="_blank">
+                        <strong>https://github.com/</strong></a>
+                    </dt>
+                    <dt>
+                        PDF passo a passo com git github -
+                        <a href="https://services.github.com/on-demand/downloads/pt_PT/github-git-cheat-sheet.pdf" target="_blank">
+                            <strong>https://services.github.com/pdf</strong></a>
+                    </dt>
+                    <dt>
+                        Livro - <a href="https://git-scm.com/book/en/v2" target="_blank"><strong>https://git-scm.com/book/en/v2</strong></a>
+                    </dt>
+                    <dt>
+                        Guia prático - <a href="http://rogerdudler.github.io/git-guide/index.pt_BR.html" target="_blank">
+                        <strong>http://rogerdudler.github.io/git-guide/index.pt_BR.html</strong></a>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="nodejs">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="titulo-secao">Tutorial Node.js</h2>
+            </div>
+        </div>
+        <div class="row">
+            <section class="container-fluid item-section">
+                <div class="destaque">
+                    <img class="logo-nodejs img-responsive"/>
+                    <h3> Sobre o node </h3>
+                </div>
+                <p>
+                    <a href="https://nodejs.org/en/about/" target="_blank"><strong>Node.js</strong></a> é um interpretador de código JavaScript com o código aberto, focado em migrar o Javascript do lado do cliente para servidores.
+                    Seu objetivo é ajudar programadores na criação de aplicações de alta escalabilidade (como um servidor web), com códigos capazes de
+                    manipular dezenas de milhares de conexões simultâneas, numa única máquina física.<br>
+                    O Node.js é baseado no interpretador V8 JavaScript Engine (interpretador de JavaScript open source implementado pelo Google em C++ e utilizado pelo Chrome).
+                    Foi criado por Ryan Dahl em 2009, e seu desenvolvimento é mantido pela fundação Node.js em parceria com a Linux Foundation.
+                </p>
+                <h3> Instalação </h3>
+                <p>
+                    Acesse a página do <strong><a href="https://nodejs.org/en/download/" target="_blank">node.js</a></strong> e faça o download
+                    da versão mais atualizada.
+                </p>
+                <img class="download-nodeJS img-responsive"/>
+                <p>
+                    Após feito o download da instalação do Node, abra o aplicativo e aceite os termos de uso.
+                </p>
+                <img class="instacao-nodejs img-responsive"/><br>
+                <p>
+                    Na instalação de pacotes, garanta que todos estejam selecionados, principalmente o node.js runtime e o NPM.
+                    Depois prossiga com a instalação até o fim com “Next, Next, Finish”.
+                    Observe que na variável PATH de ambiente do windows, foi incluído o caminho do Node.js que você escolheu.
+                    O ideal é que o caminho do Node.js seja o primeiro da lista.<br>
+                    Após todos estes passos, o ambiente de desenvolvimento do Node.js estará instalado no seu Windows,
+                    para confirmar se tudo esta funcionado, abra o Prompt de Comando do Windows e digite: “node –version”.<br>
+                    Veja a informação da versão do seu Node.js:
+                </p>
+                <img class="nodejs-versao img-responsive"/>
+            </section>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <p>Copyright &copy; Jamersonapce 2018</p>
+        </div>
+    </div>
+
+</footer>
+
+</div>
+</body>
+<script src="js/jquery-3.3.1.min.js" inline></script>
+<script type="text/javascript" src="js/global.js" inline></script>
+</html>
