@@ -20,15 +20,21 @@ const gulpSequence = require('gulp-sequence');
 const express = require('express');
 const app = express();
 
-app.set('port', (process.env.PORT || 5000));
 
-app.get('/', function (req, res) {
-    res.render('app/index');
+
+gulp.task('express', function(){
+    app.use(express.static(__dirname + '/app/'));
+    app.listen(process.env.PORT || 5000);
+    console.log('node is running');
 });
 
-app.listen(app.get('port'), function (){
-    console.log('node is running', app.get('port'));
-});
+// app.get('/', function (req, res) {
+//     res.render('app/index');
+// });
+//
+// app.listen(app.get('port'), function (){
+//     console.log('node is running', app.get('port'));
+// });
 
 
 
