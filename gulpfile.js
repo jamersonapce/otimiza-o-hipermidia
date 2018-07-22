@@ -25,7 +25,6 @@ const app = express();
 gulp.task('express', function(){
     app.use(express.static(__dirname + '/app/'));
     app.listen(process.env.PORT || 5000);
-    console.log('node is running');
 });
 
 // app.get('/', function (req, res) {
@@ -39,7 +38,7 @@ gulp.task('express', function(){
 
 
 /*--------------Alias--------------*/
- gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify'));
+ gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'express'));
 
 /*------------------  Tarefa Padrão  ---------------------*/
 
@@ -105,7 +104,7 @@ gulp.task('merge-js', function() {
         'src/js/jquery.mb.YTPlayer.js',
         'src/js/global.js'])
         .pipe(concat('script.js'))
-        .pipe(gulp.dest('app/js'));$.sequence
+        .pipe(gulp.dest('app/js'));
         // .pipe(uglify())
 });
 
