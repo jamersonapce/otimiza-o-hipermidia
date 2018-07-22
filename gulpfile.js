@@ -23,7 +23,7 @@ const app = express();
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function (req, res) {
-    res.render('app/index.html');
+    res.render('app/index');
 });
 
 app.listen(app.get('port'), function (){
