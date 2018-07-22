@@ -20,7 +20,7 @@
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -242,12 +242,12 @@
       <workItem from="1531952185924" duration="821000" />
       <workItem from="1531953027680" duration="15046000" />
       <workItem from="1532122887489" duration="6738000" />
-      <workItem from="1532218497476" duration="2876000" />
+      <workItem from="1532218497476" duration="3352000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147129000" />
+    <option name="totallyTimeSpent" value="147605000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -397,7 +397,7 @@
     <entry file="file://$PROJECT_DIR$/gulpfile.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
         </state>
       </provider>
     </entry>
