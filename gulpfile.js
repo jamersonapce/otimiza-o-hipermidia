@@ -16,7 +16,17 @@ const gulpif = require('gulp-if');
 const spritesmith = require('gulp.spritesmith');
 const inlinesource = require('gulp-inline-source');
 const htmlmin = require('gulp-htmlmin');
-const gulpSequence = require('gulp-sequence')
+const gulpSequence = require('gulp-sequence');
+const express = require('express');
+const app = express();
+
+app.get('/', function (req, res) {
+    res.send('Hello World!');
+});
+
+app.listen(3000);
+
+
 
 /*--------------Alias--------------*/
  gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify'));
