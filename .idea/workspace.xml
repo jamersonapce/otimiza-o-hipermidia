@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -17,29 +14,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="675">
               <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="procfile" pinned="false" current-in-tab="true">
+      <file leaf-file-name="procfile" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="44" selection-start-column="44" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret column="1329" selection-start-column="1329" selection-end-column="1329" />
             </state>
           </provider>
         </entry>
@@ -163,7 +151,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="27" />
     <option name="width" value="1366" />
     <option name="height" value="741" />
@@ -261,12 +249,12 @@
       <workItem from="1532218497476" duration="5740000" />
       <workItem from="1532258768414" duration="3016000" />
       <workItem from="1532263550959" duration="44000" />
-      <workItem from="1532361742400" duration="63000" />
+      <workItem from="1532361742400" duration="330000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="153116000" />
+    <option name="totallyTimeSpent" value="153383000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -278,17 +266,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1682" height="1050" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1682" height="1050" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22510561" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22510561" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.32899022" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3603872" side_tool="true" weight="0.37947884" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.6396128" visible="true" weight="0.35930735" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6396128" visible="true" weight="0.35930735" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -397,17 +384,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="44" selection-start-column="44" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="45" selection-start-line="45" selection-start-column="45" selection-end-line="45" selection-end-column="45" />
         </state>
       </provider>
     </entry>
