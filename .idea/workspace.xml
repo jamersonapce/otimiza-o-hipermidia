@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="" />
+    <list default="true" id="3c10698e-b515-4d35-aabd-e68e7afee9bc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -21,19 +24,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Procfile" value="17" />
+          <entry key="Procfile" value="92" />
+          <entry key="json" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="17" />
+          <entry key="JSON" value="4" />
+          <entry key="PLAIN_TEXT" value="92" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open" />
+      <usages-collector id="statistics.file.extensions.open" />
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gulpfile.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="104">
@@ -42,11 +50,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Procfile">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="15" selection-start-column="15" selection-end-column="15" />
+              <caret column="47" selection-start-column="47" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -63,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="22" />
+            <state relative-caret-position="98">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -152,11 +160,11 @@
         <option value="$PROJECT_DIR$/src/sass/helpers/variaveis.scss" />
         <option value="$PROJECT_DIR$/dist/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/index.html" />
         <option value="$PROJECT_DIR$/procfile" />
-        <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/Procfile" />
       </list>
     </option>
   </component>
@@ -165,6 +173,9 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
@@ -188,6 +199,17 @@
             <path>
               <item name="otimiza-o-hipermidia" type="b2602c69:ProjectViewProjectNode" />
               <item name="otimiza-o-hipermidia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="otimiza-o-hipermidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="otimiza-o-hipermidia" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="otimiza-o-hipermidia" type="b2602c69:ProjectViewProjectNode" />
+              <item name="otimiza-o-hipermidia" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+              <item name="gulp-sequence" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -270,12 +292,12 @@
       <workItem from="1532258768414" duration="3016000" />
       <workItem from="1532263550959" duration="44000" />
       <workItem from="1532361742400" duration="3916000" />
-      <workItem from="1532477930316" duration="700000" />
+      <workItem from="1532477930316" duration="1812000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157669000" />
+    <option name="totallyTimeSpent" value="158781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -288,6 +310,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2248697" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -302,7 +325,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32899022" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.3603872" side_tool="true" weight="0.37947884" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6396128" visible="true" weight="0.6807131" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.6396128" visible="true" weight="0.46839547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -391,24 +414,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="22" />
+        <state relative-caret-position="98">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="15" selection-start-column="15" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gulpfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="25" column="41" selection-start-line="25" selection-start-column="41" selection-end-line="25" selection-end-column="41" />
+          <caret column="47" selection-start-column="47" selection-end-column="47" />
         </state>
       </provider>
     </entry>
