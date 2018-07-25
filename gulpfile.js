@@ -38,7 +38,7 @@ gulp.task('express', function(){
 
 
 /*--------------Alias--------------*/
- gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'express'));
+ gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copysrc', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'express'));
 
 /*------------------  Tarefa Padrão  ---------------------*/
 
@@ -58,6 +58,12 @@ gulp.task('copycss', function() {
     return gulp.src('src/css/*.css')
         .pipe(gulp.dest('app/css') );
         // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('app/sprite/'));
+});
+
+gulp.task('copysrc', function() {
+    return gulp.src('src/**/*')
+        .pipe(gulp.dest('app') );
+    // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('app/sprite/'));
 });
 
 gulp.task('clean', function() {
