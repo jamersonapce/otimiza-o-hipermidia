@@ -1,0 +1,12 @@
+#github{
+    @extend %background-color-base;
+    @extend %cor-branca;
+}
+
+.screen-shot{
+    @include sprite($screen-shot);
+}
+
+.fluxo-git{
+    @include sprite($fluxo-git);
+}
