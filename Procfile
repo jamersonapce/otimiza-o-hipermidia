@@ -1,1 +1,1 @@
-web: node ../node_modules/gulp/bin/gulp.js default
+web: node start
