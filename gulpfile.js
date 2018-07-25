@@ -23,7 +23,7 @@ const app = express();
 
 
 gulp.task('express', function(){
-    app.use(express.static(__dirname + '/'));
+    app.use(express.static(__dirname + '/app/index.html'));
     app.listen(process.env.PORT || 5000);
 });
 
