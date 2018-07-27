@@ -4,5 +4,3 @@ node_modules
 #debug npm #
 npm-debug.log
 
-#package-log#
-package-lock.json
