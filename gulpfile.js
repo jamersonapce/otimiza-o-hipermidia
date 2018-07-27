@@ -19,12 +19,13 @@ const htmlmin = require('gulp-htmlmin');
 const gulpSequence = require('gulp-sequence');
 const express = require('express');
 const app = express();
-// var port = process.env.port || 5000;
+var porta = process.env.PORT || 5000;
 
 
 
 gulp.task('express', function(){
     app.use(express.static(__dirname + '/app'));
+    app.listen(porta);
 });
 
 // app.get('/', function (req, res) {
