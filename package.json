@@ -41,7 +41,8 @@
     "express": "^4.16.3",
     "gulp-htmlmin": "^4.0.0",
     "gulp-if": "^2.0.2",
-    "gulp-sequence": "^1.0.0"
+    "gulp-sequence": "^1.0.0",
+    "serve-favicon": "^2.5.0"
   },
   "engines": {
     "node": "10.4.1",

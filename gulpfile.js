@@ -19,12 +19,14 @@ const htmlmin = require('gulp-htmlmin');
 const gulpSequence = require('gulp-sequence');
 const express = require('express');
 const app = express();
+const favicon = require("serve-favicon");
 var porta = process.env.PORT || 5000;
 
 
 
 gulp.task('express', function(){
     app.use(express.static(__dirname + './'));
+    app.use(favicon(__dirname + "/app/assets/favicon.ico"));
     app.listen(porta);
 });
 
