@@ -26,7 +26,7 @@ var porta = process.env.PORT || 5000;
 
 gulp.task('express', function(){
     dist.use(express.static(__dirname + './'));
-    dist.use(favicon(__dirname + "/dist/assets/favicon.ico"));
+    dist.use(favicon(__dirname + "/dist/img/favicon.ico"));
     dist.listen(porta);
 });
 
