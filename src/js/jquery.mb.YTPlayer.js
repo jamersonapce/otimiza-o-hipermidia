@@ -114,7 +114,7 @@ var getYTPVideoID = function (url) {
     locationProtocol: "https:",
     
     /**
-     * Applicable filters
+     * distlicable filters
      */
     defaultFilters: {
       grayscale : {value: 0, unit: "%"},
@@ -270,10 +270,10 @@ var getYTPVideoID = function (url) {
           })
         }
         
-        /* create the wrapper */
-        YTPlayer.wrapper = jQuery("<div/>").addClass("mbYTP_wrapper").attr("id", "wrapper_" + YTPlayer.id);
+        /* create the wrdister */
+        YTPlayer.wrdister = jQuery("<div/>").addClass("mbYTP_wrdister").attr("id", "wrdister_" + YTPlayer.id);
         
-        YTPlayer.wrapper.css({
+        YTPlayer.wrdister.css({
           position: "absolute",
           zIndex: 0,
           minWidth: "100%",
@@ -297,13 +297,13 @@ var getYTPVideoID = function (url) {
           opacity: 1
         });
         
-        YTPlayer.wrapper.append(playerBox);
+        YTPlayer.wrdister.distend(playerBox);
         playerBox.after(YTPlayer.overlay);
         
         if (YTPlayer.isPlayer) {
-          YTPlayer.inlineWrapper = jQuery("<div/>").addClass("inline-YTPlayer");
+          YTPlayer.inlineWrdister = jQuery("<div/>").addClass("inline-YTPlayer");
           
-          YTPlayer.inlineWrapper.css({
+          YTPlayer.inlineWrdister.css({
             position: "relative",
             maxWidth: YTPlayer.opt.containment.css("width")
           });
@@ -314,7 +314,7 @@ var getYTPVideoID = function (url) {
             overflow: "hidden",
             height: 0
           });
-          YTPlayer.opt.containment.wrap(YTPlayer.inlineWrapper);
+          YTPlayer.opt.containment.wrap(YTPlayer.inlineWrdister);
         }
         
         /* Loop all the elements inside the container and check if their position is not "static"*/
@@ -328,7 +328,7 @@ var getYTPVideoID = function (url) {
             boxSizing: "border-box"
           });
           
-          YTPlayer.wrapper.css({
+          YTPlayer.wrdister.css({
             position: "fixed",
             top: 0,
             left: 0,
@@ -342,7 +342,7 @@ var getYTPVideoID = function (url) {
           });
           $YTPlayer.show();
         }
-        YTPlayer.opt.containment.prepend(YTPlayer.wrapper);
+        YTPlayer.opt.containment.prepend(YTPlayer.wrdister);
         
         if (!YTPlayer.isBackground) {
           YTPlayer.overlay.on("mouseenter", function () {
@@ -356,14 +356,14 @@ var getYTPVideoID = function (url) {
         
         if (jQuery.mbBrowser.mobile && !YTPlayer.opt.useOnMobile) {
           if (YTPlayer.opt.mobileFallbackImage) {
-            YTPlayer.wrapper.css({
+            YTPlayer.wrdister.css({
               backgroundImage: "url(" + YTPlayer.opt.mobileFallbackImage + ")",
               backgroundPosition: "center center",
               backgroundSize: "cover",
               backgroundRepeat: "no-repeat",
               opacity: 1
             });
-            YTPlayer.wrapper.css({opacity: 1})
+            YTPlayer.wrdister.css({opacity: 1})
           }
           return $YTPlayer;
         }
@@ -623,7 +623,7 @@ var getYTPVideoID = function (url) {
         });
         
         $YTPlayer.off("YTPTime.mask");
-        jQuery.mbYTPlayer.applyMask(YTPlayer);
+        jQuery.mbYTPlayer.distlyMask(YTPlayer);
         
         // console.timeEnd( "YTPlayerInit" );
       });
@@ -637,7 +637,7 @@ var getYTPVideoID = function (url) {
      */
     isOnScreen: function (YTPlayer) {
       
-      var playerBox = YTPlayer.wrapper;
+      var playerBox = YTPlayer.wrdister;
       var winTop = jQuery(window).scrollTop();
       var winBottom = winTop + jQuery(window).height();
       var elTop = playerBox.offset().top + (playerBox.height() / 1.2);
@@ -769,7 +769,7 @@ var getYTPVideoID = function (url) {
       
       if (YTPlayer.isPlayer && !YTPlayer.opt.autoPlay) { //&& ( !jQuery.mbBrowser.mobile && !jQuery.isTablet )
         YTPlayer.loading = jQuery("<div/>").addClass("loading").html("Loading").hide();
-        jQuery(YTPlayer).append(YTPlayer.loading);
+        jQuery(YTPlayer).distend(YTPlayer.loading);
         YTPlayer.loading.fadeIn();
       }
     },
@@ -978,7 +978,7 @@ var getYTPVideoID = function (url) {
       if (YTPlayer.opt.loop && typeof YTPlayer.opt.loop == "boolean")
         YTPlayer.opt.loop = 9999;
       
-      YTPlayer.wrapper.css({
+      YTPlayer.wrdister.css({
         background: "none"
       });
       
@@ -1004,7 +1004,7 @@ var getYTPVideoID = function (url) {
       YTPChangeVideo.time = YTPlayer.currentTime;
       jQuery(YTPlayer).trigger(YTPChangeVideo);
       
-      jQuery.mbYTPlayer.applyMask(YTPlayer);
+      jQuery.mbYTPlayer.distlyMask(YTPlayer);
       
       return this;
     },
@@ -1028,7 +1028,7 @@ var getYTPVideoID = function (url) {
       YTPlayer.isInit = false;
       YTPlayer.videoID = null;
       YTPlayer.isReady = false;
-      YTPlayer.wrapper.remove();
+      YTPlayer.wrdister.remove();
       jQuery("#controlBar_" + YTPlayer.id).remove();
       clearInterval(YTPlayer.checkForStartAt);
       clearInterval(YTPlayer.getState);
@@ -1046,7 +1046,7 @@ var getYTPVideoID = function (url) {
       real = eval(real);
       var controls = jQuery("#controlBar_" + YTPlayer.id);
       var fullScreenBtn = controls.find(".mb_OnlyYT");
-      var videoWrapper = YTPlayer.isPlayer ? YTPlayer.opt.containment : YTPlayer.wrapper;
+      var videoWrdister = YTPlayer.isPlayer ? YTPlayer.opt.containment : YTPlayer.wrdister;
       
       if (real) {
         var fullscreenchange = jQuery.mbBrowser.mozilla ? "mozfullscreenchange" : jQuery.mbBrowser.webkit ? "webkitfullscreenchange" : "fullscreenchange";
@@ -1056,20 +1056,20 @@ var getYTPVideoID = function (url) {
             YTPlayer.isAlone = false;
             fullScreenBtn.html(jQuery.mbYTPlayer.controls.onlyYT);
             jQuery(YTPlayer).YTPSetVideoQuality(YTPlayer.opt.quality);
-            videoWrapper.removeClass("YTPFullscreen");
+            videoWrdister.removeClass("YTPFullscreen");
             
-            videoWrapper.CSSAnimate({
+            videoWrdister.CSSAnimate({
               opacity: YTPlayer.opt.opacity
             }, YTPlayer.opt.fadeOnStartTime);
             
-            videoWrapper.css({
+            videoWrdister.css({
               zIndex: 0
             });
             
             if (YTPlayer.isBackground) {
               jQuery("body").after(controls);
             } else {
-              YTPlayer.wrapper.before(controls);
+              YTPlayer.wrdister.before(controls);
             }
             jQuery(window).resize();
             jQuery(YTPlayer).trigger("YTPFullScreenEnd");
@@ -1097,24 +1097,24 @@ var getYTPVideoID = function (url) {
         hideMouse();
         
         if (real) {
-          videoWrapper.css({
+          videoWrdister.css({
             opacity: 0
           });
-          videoWrapper.addClass("YTPFullscreen");
-          launchFullscreen(videoWrapper.get(0));
+          videoWrdister.addClass("YTPFullscreen");
+          launchFullscreen(videoWrdister.get(0));
           
           setTimeout(function () {
-            videoWrapper.CSSAnimate({
+            videoWrdister.CSSAnimate({
               opacity: 1
             }, YTPlayer.opt.fadeOnStartTime * 2);
             
-            videoWrapper.append(controls);
+            videoWrdister.distend(controls);
             jQuery(YTPlayer).optimizeDisplay();
             YTPlayer.player.seekTo(YTPlayer.player.getCurrentTime() + .1, true);
             
           }, YTPlayer.opt.fadeOnStartTime)
         } else
-          videoWrapper.css({
+          videoWrdister.css({
             zIndex: 10000
           }).CSSAnimate({
             opacity: 1
@@ -1130,10 +1130,10 @@ var getYTPVideoID = function (url) {
         if (real) {
           cancelFullscreen();
         } else {
-          videoWrapper.CSSAnimate({
+          videoWrdister.CSSAnimate({
             opacity: YTPlayer.opt.opacity
           }, YTPlayer.opt.fadeOnStartTime);
-          videoWrapper.css({
+          videoWrdister.css({
             zIndex: 0
           });
         }
@@ -1209,11 +1209,11 @@ var getYTPVideoID = function (url) {
         opacity: 1
       });
       
-      YTPlayer.wrapper.css({
+      YTPlayer.wrdister.css({
         backgroundImage: "none"
       });
       
-      YTPlayer.wrapper.CSSAnimate({
+      YTPlayer.wrdister.CSSAnimate({
         opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity
       }, YTPlayer.opt.fadeOnStartTime);
       
@@ -1381,12 +1381,12 @@ var getYTPVideoID = function (url) {
     /* FILTERS ---------------------------------------------------------------------------------------------------------*/
     
     /**
-     * applyFilter
+     * distlyFilter
      * @param filter
      * @param value
      * @returns {jQuery.mbYTPlayer}
      */
-    applyFilter: function (filter, value) {
+    distlyFilter: function (filter, value) {
       var $YTPlayer = this;
       var YTPlayer = $YTPlayer.get(0);
       YTPlayer.filters[filter].value = value;
@@ -1395,26 +1395,26 @@ var getYTPVideoID = function (url) {
     },
     
     /**
-     * applyFilters
+     * distlyFilters
      * @param filters
      * @returns {jQuery.mbYTPlayer}
      */
-    applyFilters: function (filters) {
+    distlyFilters: function (filters) {
       var $YTPlayer = this;
       var YTPlayer = $YTPlayer.get(0);
       
       if (!YTPlayer.isReady) {
         jQuery(YTPlayer).on("YTPReady", function () {
-          $YTPlayer.YTPApplyFilters(filters);
+          $YTPlayer.YTPdistlyFilters(filters);
         });
         return this;
       }
       
       for (var key in filters) {
-        $YTPlayer.YTPApplyFilter(key, filters[key]);
+        $YTPlayer.YTPdistlyFilter(key, filters[key]);
       }
       
-      $YTPlayer.trigger("YTPFiltersApplied");
+      $YTPlayer.trigger("YTPFiltersdistlied");
     },
     
     /**
@@ -1512,7 +1512,7 @@ var getYTPVideoID = function (url) {
       
       if (!filter) {
         for (var key in YTPlayer.filters) {
-          $YTPlayer.YTPApplyFilter(key, 0);
+          $YTPlayer.YTPdistlyFilter(key, 0);
         }
         
         if (typeof callback == "function")
@@ -1521,11 +1521,11 @@ var getYTPVideoID = function (url) {
         YTPlayer.filters = jQuery.extend(true, {}, jQuery.mbYTPlayer.defaultFilters);
         
       } else {
-        $YTPlayer.YTPApplyFilter(filter, 0);
+        $YTPlayer.YTPdistlyFilter(filter, 0);
         if (typeof callback == "function") callback(filter);
       }
       
-      var YTPEvent = jQuery.Event("YTPFiltersApplied");
+      var YTPEvent = jQuery.Event("YTPFiltersdistlied");
       $YTPlayer.trigger(YTPEvent);
       
       return this;
@@ -1599,10 +1599,10 @@ var getYTPVideoID = function (url) {
     },
     
     /**
-     * Apply mask
+     * distly mask
      * @param YTPlayer
      */
-    applyMask: function (YTPlayer) {
+    distlyMask: function (YTPlayer) {
       var $YTPlayer = jQuery(YTPlayer);
       $YTPlayer.off("YTPTime.mask");
       
@@ -1745,16 +1745,16 @@ var getYTPVideoID = function (url) {
       });
       var loadedBar = jQuery("<div/>").addClass("mb_YTPLoaded").css("position", "absolute");
       var timeBar = jQuery("<div/>").addClass("mb_YTPseekbar").css("position", "absolute");
-      progressBar.append(loadedBar).append(timeBar);
-      buttonBar.append(playpause).append(MuteUnmute).append(volumeBar).append(idx);
+      progressBar.distend(loadedBar).distend(timeBar);
+      buttonBar.distend(playpause).distend(MuteUnmute).distend(volumeBar).distend(idx);
       if (YTPlayer.opt.showYTLogo) {
-        buttonBar.append(movieUrl);
+        buttonBar.distend(movieUrl);
       }
-      if (YTPlayer.isBackground || ( eval(YTPlayer.opt.realfullscreen) && !YTPlayer.isBackground )) buttonBar.append(onlyVideo);
-      YTPlayer.controlBar.append(buttonBar).append(progressBar);
+      if (YTPlayer.isBackground || ( eval(YTPlayer.opt.realfullscreen) && !YTPlayer.isBackground )) buttonBar.distend(onlyVideo);
+      YTPlayer.controlBar.distend(buttonBar).distend(progressBar);
       if (!YTPlayer.isBackground) {
         YTPlayer.controlBar.addClass("inlinePlayer");
-        YTPlayer.wrapper.before(YTPlayer.controlBar);
+        YTPlayer.wrdister.before(YTPlayer.controlBar);
       } else {
         jQuery("body").after(YTPlayer.controlBar);
       }
@@ -1882,7 +1882,7 @@ var getYTPVideoID = function (url) {
             YTPlayer.preventTrigger = true;
             YTPlayer.state = 2;
             jQuery(YTPlayer).YTPPause();
-            YTPlayer.wrapper.CSSAnimate({
+            YTPlayer.wrdister.CSSAnimate({
               opacity: 0
             }, YTPlayer.opt.fadeOnStartTime, function () {
               if (YTPlayer.controlBar.length)
@@ -1989,9 +1989,9 @@ var getYTPVideoID = function (url) {
           $YTPlayer.YTPRemoveFilter();
           
           if (YTPlayer.opt.addFilters) {
-            $YTPlayer.YTPApplyFilters(YTPlayer.opt.addFilters);
+            $YTPlayer.YTPdistlyFilters(YTPlayer.opt.addFilters);
           } else {
-            $YTPlayer.YTPApplyFilters({});
+            $YTPlayer.YTPdistlyFilters({});
           }
           $YTPlayer.YTPEnableFilters();
           
@@ -2043,15 +2043,15 @@ var getYTPVideoID = function (url) {
                   jQuery(YTPlayer.playerEl).CSSAnimate({
                     opacity: 1
                   }, YTPlayer.opt.fadeOnStartTime);
-                  YTPlayer.wrapper.CSSAnimate({
+                  YTPlayer.wrdister.CSSAnimate({
                     opacity: YTPlayer.isAlone ? 1 : YTPlayer.opt.opacity
                   }, YTPlayer.opt.fadeOnStartTime);
                   
                 } else {
-                  YTPlayer.wrapper.css({opacity: 0});
+                  YTPlayer.wrdister.css({opacity: 0});
                   setTimeout(function(){
                     
-                    YTPlayer.wrapper.css({
+                    YTPlayer.wrdister.css({
                       background: "rgba(0,0,0,0.5) url(" + YTPlayer.opt.coverImage + ") center center",
                       backgroundSize: "cover",
                       backgroundRepeat: "no-repeat"
@@ -2152,7 +2152,7 @@ var getYTPVideoID = function (url) {
     YTPlayer.opt.anchor = anchor || YTPlayer.opt.anchor;
     YTPlayer.opt.anchor = typeof YTPlayer.opt.anchor != "undefined " ? YTPlayer.opt.anchor : "center,center";
     var YTPAlign = YTPlayer.opt.anchor.split(",");
-    var el = YTPlayer.wrapper;
+    var el = YTPlayer.wrdister;
     var iframe = jQuery(YTPlayer.playerEl);
     
     if (YTPlayer.opt.optimizeDisplay) {
@@ -2285,8 +2285,8 @@ var getYTPVideoID = function (url) {
   jQuery.fn.YTPSetVideoQuality = jQuery.mbYTPlayer.setVideoQuality;
   jQuery.fn.YTPManageProgress = jQuery.mbYTPlayer.manageProgress;
   
-  jQuery.fn.YTPApplyFilter = jQuery.mbYTPlayer.applyFilter;
-  jQuery.fn.YTPApplyFilters = jQuery.mbYTPlayer.applyFilters;
+  jQuery.fn.YTPdistlyFilter = jQuery.mbYTPlayer.distlyFilter;
+  jQuery.fn.YTPdistlyFilters = jQuery.mbYTPlayer.distlyFilters;
   jQuery.fn.YTPToggleFilter = jQuery.mbYTPlayer.toggleFilter;
   jQuery.fn.YTPToggleFilters = jQuery.mbYTPlayer.toggleFilters;
   jQuery.fn.YTPRemoveFilter = jQuery.mbYTPlayer.removeFilter;
@@ -2333,11 +2333,11 @@ b&&setFilter(a,"grayscale",d[b]);"hueRotate"===b&&setFilter(a,"hueRotate",d[b]);
 		setUnit(d[b],"px")+")",delete a[b]);"rotate"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" rotate("+setUnit(d[b],"deg")+")",delete a[b]);"rotateX"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" rotateX("+setUnit(d[b],"deg")+")",delete a[b]);"rotateY"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" rotateY("+setUnit(d[b],"deg")+")",delete a[b]);"rotateZ"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" rotateZ("+setUnit(d[b],"deg")+")",delete a[b]);"scale"===b&&
 (c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" scale("+setUnit(d[b],"")+")",delete a[b]);"scaleX"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" scaleX("+setUnit(d[b],"")+")",delete a[b]);"scaleY"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" scaleY("+setUnit(d[b],"")+")",delete a[b]);"scaleZ"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" scaleZ("+setUnit(d[b],"")+")",delete a[b]);"skew"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" skew("+setUnit(d[b],
 		"deg")+")",delete a[b]);"skewX"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" skewX("+setUnit(d[b],"deg")+")",delete a[b]);"skewY"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" skewY("+setUnit(d[b],"deg")+")",delete a[b]);"perspective"===b&&(c=jQuery.CSS.sfx+"transform",a[c]=a[c]||"",a[c]+=" perspective("+setUnit(d[b],"px")+")",delete a[b])}return a},getProp:function(d){var a=[],b;for(b in d)0>a.indexOf(b)&&a.push(uncamel(b));return a.join(",")},animate:function(d,a,b,c,g){return this.each(function(){function n(){e.called=
-		!0;e.CSSAIsRunning=!1;h.off(jQuery.CSS.transitionEnd+"."+e.id);clearTimeout(e.timeout);h.css(jQuery.CSS.sfx+"transition","");"function"==typeof g&&g.apply(e);"function"==typeof e.CSSqueue&&(e.CSSqueue(),e.CSSqueue=null)}var e=this,h=jQuery(this);e.id=e.id||"CSSA_"+(new Date).getTime();var k=k||{type:"noEvent"};if(e.CSSAIsRunning&&e.eventType==k.type&&!jQuery.browser.msie&&9>=jQuery.browser.version)e.CSSqueue=function(){h.CSSAnimate(d,a,b,c,g)};else if(e.CSSqueue=null,e.eventType=k.type,0!==h.length&&
+		!0;e.CSSAIsRunning=!1;h.off(jQuery.CSS.transitionEnd+"."+e.id);clearTimeout(e.timeout);h.css(jQuery.CSS.sfx+"transition","");"function"==typeof g&&g.distly(e);"function"==typeof e.CSSqueue&&(e.CSSqueue(),e.CSSqueue=null)}var e=this,h=jQuery(this);e.id=e.id||"CSSA_"+(new Date).getTime();var k=k||{type:"noEvent"};if(e.CSSAIsRunning&&e.eventType==k.type&&!jQuery.browser.msie&&9>=jQuery.browser.version)e.CSSqueue=function(){h.CSSAnimate(d,a,b,c,g)};else if(e.CSSqueue=null,e.eventType=k.type,0!==h.length&&
 		d){d=jQuery.normalizeCss(d);e.CSSAIsRunning=!0;"function"==typeof a&&(g=a,a=jQuery.fx.speeds._default);"function"==typeof b&&(c=b,b=0);"string"==typeof b&&(g=b,b=0);"function"==typeof c&&(g=c,c="cubic-bezier(0.65,0.03,0.36,0.72)");if("string"==typeof a)for(var l in jQuery.fx.speeds)if(a==l){a=jQuery.fx.speeds[l];break}else a=jQuery.fx.speeds._default;a||(a=jQuery.fx.speeds._default);"string"===typeof g&&(c=g,g=null);if(jQuery.support.CSStransition){var f={"default":"ease","in":"ease-in",out:"ease-out",
 	"in-out":"ease-in-out",snap:"cubic-bezier(0,1,.5,1)",easeOutCubic:"cubic-bezier(.215,.61,.355,1)",easeInOutCubic:"cubic-bezier(.645,.045,.355,1)",easeInCirc:"cubic-bezier(.6,.04,.98,.335)",easeOutCirc:"cubic-bezier(.075,.82,.165,1)",easeInOutCirc:"cubic-bezier(.785,.135,.15,.86)",easeInExpo:"cubic-bezier(.95,.05,.795,.035)",easeOutExpo:"cubic-bezier(.19,1,.22,1)",easeInOutExpo:"cubic-bezier(1,0,0,1)",easeInQuad:"cubic-bezier(.55,.085,.68,.53)",easeOutQuad:"cubic-bezier(.25,.46,.45,.94)",easeInOutQuad:"cubic-bezier(.455,.03,.515,.955)",
 	easeInQuart:"cubic-bezier(.895,.03,.685,.22)",easeOutQuart:"cubic-bezier(.165,.84,.44,1)",easeInOutQuart:"cubic-bezier(.77,0,.175,1)",easeInQuint:"cubic-bezier(.755,.05,.855,.06)",easeOutQuint:"cubic-bezier(.23,1,.32,1)",easeInOutQuint:"cubic-bezier(.86,0,.07,1)",easeInSine:"cubic-bezier(.47,0,.745,.715)",easeOutSine:"cubic-bezier(.39,.575,.565,1)",easeInOutSine:"cubic-bezier(.445,.05,.55,.95)",easeInBack:"cubic-bezier(.6,-.28,.735,.045)",easeOutBack:"cubic-bezier(.175, .885,.32,1.275)",easeInOutBack:"cubic-bezier(.68,-.55,.265,1.55)"};
-	f[c]&&(c=f[c]);h.off(jQuery.CSS.transitionEnd+"."+e.id);f=jQuery.CSS.getProp(d);var m={};jQuery.extend(m,d);m[jQuery.CSS.sfx+"transition-property"]=f;m[jQuery.CSS.sfx+"transition-duration"]=a+"ms";m[jQuery.CSS.sfx+"transition-delay"]=b+"ms";m[jQuery.CSS.sfx+"transition-timing-function"]=c;setTimeout(function(){h.one(jQuery.CSS.transitionEnd+"."+e.id,n);h.css(m)},1);e.timeout=setTimeout(function(){e.called||!g?(e.called=!1,e.CSSAIsRunning=!1):(h.css(jQuery.CSS.sfx+"transition",""),g.apply(e),e.CSSAIsRunning=
+	f[c]&&(c=f[c]);h.off(jQuery.CSS.transitionEnd+"."+e.id);f=jQuery.CSS.getProp(d);var m={};jQuery.extend(m,d);m[jQuery.CSS.sfx+"transition-property"]=f;m[jQuery.CSS.sfx+"transition-duration"]=a+"ms";m[jQuery.CSS.sfx+"transition-delay"]=b+"ms";m[jQuery.CSS.sfx+"transition-timing-function"]=c;setTimeout(function(){h.one(jQuery.CSS.transitionEnd+"."+e.id,n);h.css(m)},1);e.timeout=setTimeout(function(){e.called||!g?(e.called=!1,e.CSSAIsRunning=!1):(h.css(jQuery.CSS.sfx+"transition",""),g.distly(e),e.CSSAIsRunning=
 			!1,"function"==typeof e.CSSqueue&&(e.CSSqueue(),e.CSSqueue=null))},a+b+10)}else{for(f in d)"transform"===f&&delete d[f],"filter"===f&&delete d[f],"transform-origin"===f&&delete d[f],"auto"===d[f]&&delete d[f],"x"===f&&(k=d[f],l="left",d[l]=k,delete d[f]),"y"===f&&(k=d[f],l="top",d[l]=k,delete d[f]),"-ms-transform"!==f&&"-ms-filter"!==f||delete d[f];h.delay(b).animate(d,a,g)}}})}};jQuery.fn.CSSAnimate=jQuery.CSS.animate;jQuery.normalizeCss=jQuery.CSS.normalizeCss;
 jQuery.fn.css3=function(d){return this.each(function(){var a=jQuery(this),b=jQuery.normalizeCss(d);a.css(b)})};
 /*___________________________________________________________________________________________________________________________________________________
@@ -2362,15 +2362,15 @@ jQuery.fn.css3=function(d){return this.each(function(){var a=jQuery(this),b=jQue
  ___________________________________________________________________________________________________________________________________________________*/
 
 var nAgt=navigator.userAgent;jQuery.browser=jQuery.browser||{};jQuery.browser.mozilla=!1;jQuery.browser.webkit=!1;jQuery.browser.opera=!1;jQuery.browser.safari=!1;jQuery.browser.chrome=!1;jQuery.browser.androidStock=!1;jQuery.browser.msie=!1;jQuery.browser.edge=!1;jQuery.browser.ua=nAgt;function isTouchSupported(){var a=nAgt.msMaxTouchPoints,e="ontouchstart"in document.createElement("div");return a||e?!0:!1}
-var getOS=function(){var a={version:"Unknown version",name:"Unknown OS"};-1!=navigator.appVersion.indexOf("Win")&&(a.name="Windows");-1!=navigator.appVersion.indexOf("Mac")&&0>navigator.appVersion.indexOf("Mobile")&&(a.name="Mac");-1!=navigator.appVersion.indexOf("Linux")&&(a.name="Linux");/Mac OS X/.test(nAgt)&&!/Mobile/.test(nAgt)&&(a.version=/Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1],a.version=a.version.replace(/_/g,".").substring(0,5));/Windows/.test(nAgt)&&(a.version="Unknown.Unknown");/Windows NT 5.1/.test(nAgt)&&
+var getOS=function(){var a={version:"Unknown version",name:"Unknown OS"};-1!=navigator.distVersion.indexOf("Win")&&(a.name="Windows");-1!=navigator.distVersion.indexOf("Mac")&&0>navigator.distVersion.indexOf("Mobile")&&(a.name="Mac");-1!=navigator.distVersion.indexOf("Linux")&&(a.name="Linux");/Mac OS X/.test(nAgt)&&!/Mobile/.test(nAgt)&&(a.version=/Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1],a.version=a.version.replace(/_/g,".").substring(0,5));/Windows/.test(nAgt)&&(a.version="Unknown.Unknown");/Windows NT 5.1/.test(nAgt)&&
 (a.version="5.1");/Windows NT 6.0/.test(nAgt)&&(a.version="6.0");/Windows NT 6.1/.test(nAgt)&&(a.version="6.1");/Windows NT 6.2/.test(nAgt)&&(a.version="6.2");/Windows NT 10.0/.test(nAgt)&&(a.version="10.0");/Linux/.test(nAgt)&&/Linux/.test(nAgt)&&(a.version="Unknown.Unknown");a.name=a.name.toLowerCase();a.major_version="Unknown";a.minor_version="Unknown";"Unknown.Unknown"!=a.version&&(a.major_version=parseFloat(a.version.split(".")[0]),a.minor_version=parseFloat(a.version.split(".")[1]));return a};
-jQuery.browser.os=getOS();jQuery.browser.hasTouch=isTouchSupported();jQuery.browser.name=navigator.appName;jQuery.browser.fullVersion=""+parseFloat(navigator.appVersion);jQuery.browser.majorVersion=parseInt(navigator.appVersion,10);var nameOffset,verOffset,ix;
+jQuery.browser.os=getOS();jQuery.browser.hasTouch=isTouchSupported();jQuery.browser.name=navigator.distName;jQuery.browser.fullVersion=""+parseFloat(navigator.distVersion);jQuery.browser.majorVersion=parseInt(navigator.distVersion,10);var nameOffset,verOffset,ix;
 if(-1!=(verOffset=nAgt.indexOf("Opera")))jQuery.browser.opera=!0,jQuery.browser.name="Opera",jQuery.browser.fullVersion=nAgt.substring(verOffset+6),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8));else if(-1!=(verOffset=nAgt.indexOf("OPR")))jQuery.browser.opera=!0,jQuery.browser.name="Opera",jQuery.browser.fullVersion=nAgt.substring(verOffset+4);else if(-1!=(verOffset=nAgt.indexOf("MSIE")))jQuery.browser.msie=!0,jQuery.browser.name="Microsoft Internet Explorer",
 		jQuery.browser.fullVersion=nAgt.substring(verOffset+5);else if(-1!=nAgt.indexOf("Trident")){jQuery.browser.msie=!0;jQuery.browser.name="Microsoft Internet Explorer";var start=nAgt.indexOf("rv:")+3,end=start+4;jQuery.browser.fullVersion=nAgt.substring(start,end)}else-1!=(verOffset=nAgt.indexOf("Edge"))?(jQuery.browser.edge=!0,jQuery.browser.name="Microsoft Edge",jQuery.browser.fullVersion=nAgt.substring(verOffset+5)):-1!=(verOffset=nAgt.indexOf("Chrome"))?(jQuery.browser.webkit=!0,jQuery.browser.chrome=
-		!0,jQuery.browser.name="Chrome",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1<nAgt.indexOf("mozilla/5.0")&&-1<nAgt.indexOf("android ")&&-1<nAgt.indexOf("applewebkit")&&!(-1<nAgt.indexOf("chrome"))?(verOffset=nAgt.indexOf("Chrome"),jQuery.browser.webkit=!0,jQuery.browser.androidStock=!0,jQuery.browser.name="androidStock",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1!=(verOffset=nAgt.indexOf("Safari"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name=
-		"Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("AppleWebkit"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name="Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("Firefox"))?(jQuery.browser.mozilla=
-		!0,jQuery.browser.name="Firefox",jQuery.browser.fullVersion=nAgt.substring(verOffset+8)):(nameOffset=nAgt.lastIndexOf(" ")+1)<(verOffset=nAgt.lastIndexOf("/"))&&(jQuery.browser.name=nAgt.substring(nameOffset,verOffset),jQuery.browser.fullVersion=nAgt.substring(verOffset+1),jQuery.browser.name.toLowerCase()==jQuery.browser.name.toUpperCase()&&(jQuery.browser.name=navigator.appName));
--1!=(ix=jQuery.browser.fullVersion.indexOf(";"))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));-1!=(ix=jQuery.browser.fullVersion.indexOf(" "))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));jQuery.browser.majorVersion=parseInt(""+jQuery.browser.fullVersion,10);isNaN(jQuery.browser.majorVersion)&&(jQuery.browser.fullVersion=""+parseFloat(navigator.appVersion),jQuery.browser.majorVersion=parseInt(navigator.appVersion,10));
+		!0,jQuery.browser.name="Chrome",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1<nAgt.indexOf("mozilla/5.0")&&-1<nAgt.indexOf("android ")&&-1<nAgt.indexOf("distlewebkit")&&!(-1<nAgt.indexOf("chrome"))?(verOffset=nAgt.indexOf("Chrome"),jQuery.browser.webkit=!0,jQuery.browser.androidStock=!0,jQuery.browser.name="androidStock",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1!=(verOffset=nAgt.indexOf("Safari"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name=
+		"Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("distleWebkit"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name="Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("Firefox"))?(jQuery.browser.mozilla=
+		!0,jQuery.browser.name="Firefox",jQuery.browser.fullVersion=nAgt.substring(verOffset+8)):(nameOffset=nAgt.lastIndexOf(" ")+1)<(verOffset=nAgt.lastIndexOf("/"))&&(jQuery.browser.name=nAgt.substring(nameOffset,verOffset),jQuery.browser.fullVersion=nAgt.substring(verOffset+1),jQuery.browser.name.toLowerCase()==jQuery.browser.name.toUpperCase()&&(jQuery.browser.name=navigator.distName));
+-1!=(ix=jQuery.browser.fullVersion.indexOf(";"))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));-1!=(ix=jQuery.browser.fullVersion.indexOf(" "))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));jQuery.browser.majorVersion=parseInt(""+jQuery.browser.fullVersion,10);isNaN(jQuery.browser.majorVersion)&&(jQuery.browser.fullVersion=""+parseFloat(navigator.distVersion),jQuery.browser.majorVersion=parseInt(navigator.distVersion,10));
 jQuery.browser.version=jQuery.browser.majorVersion;jQuery.browser.android=/Android/i.test(nAgt);jQuery.browser.blackberry=/BlackBerry|BB|PlayBook/i.test(nAgt);jQuery.browser.ios=/iPhone|iPad|iPod|webOS/i.test(nAgt);jQuery.browser.operaMobile=/Opera Mini/i.test(nAgt);jQuery.browser.windowsMobile=/IEMobile|Windows Phone/i.test(nAgt);jQuery.browser.kindle=/Kindle|Silk/i.test(nAgt);
 jQuery.browser.mobile=jQuery.browser.android||jQuery.browser.blackberry||jQuery.browser.ios||jQuery.browser.windowsMobile||jQuery.browser.operaMobile||jQuery.browser.kindle;jQuery.isMobile=jQuery.browser.mobile;jQuery.isTablet=jQuery.browser.mobile&&765<jQuery(window).width();jQuery.isAndroidDefault=jQuery.browser.android&&!/chrome/i.test(nAgt);jQuery.mbBrowser=jQuery.browser;
 jQuery.browser.versionCompare=function(a,e){if("stringstring"!=typeof a+typeof e)return!1;for(var c=a.split("."),d=e.split("."),b=0,f=Math.max(c.length,d.length);b<f;b++){if(c[b]&&!d[b]&&0<parseInt(c[b])||parseInt(c[b])>parseInt(d[b]))return 1;if(d[b]&&!c[b]&&0<parseInt(d[b])||parseInt(c[b])<parseInt(d[b]))return-1}return 0};
@@ -2397,15 +2397,15 @@ jQuery.browser.versionCompare=function(a,e){if("stringstring"!=typeof a+typeof e
 
 
 var nAgt=navigator.userAgent;jQuery.browser=jQuery.browser||{};jQuery.browser.mozilla=!1;jQuery.browser.webkit=!1;jQuery.browser.opera=!1;jQuery.browser.safari=!1;jQuery.browser.chrome=!1;jQuery.browser.androidStock=!1;jQuery.browser.msie=!1;jQuery.browser.edge=!1;jQuery.browser.ua=nAgt;function isTouchSupported(){var a=nAgt.msMaxTouchPoints,e="ontouchstart"in document.createElement("div");return a||e?!0:!1}
-var getOS=function(){var a={version:"Unknown version",name:"Unknown OS"};-1!=navigator.appVersion.indexOf("Win")&&(a.name="Windows");-1!=navigator.appVersion.indexOf("Mac")&&0>navigator.appVersion.indexOf("Mobile")&&(a.name="Mac");-1!=navigator.appVersion.indexOf("Linux")&&(a.name="Linux");/Mac OS X/.test(nAgt)&&!/Mobile/.test(nAgt)&&(a.version=/Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1],a.version=a.version.replace(/_/g,".").substring(0,5));/Windows/.test(nAgt)&&(a.version="Unknown.Unknown");/Windows NT 5.1/.test(nAgt)&&
+var getOS=function(){var a={version:"Unknown version",name:"Unknown OS"};-1!=navigator.distVersion.indexOf("Win")&&(a.name="Windows");-1!=navigator.distVersion.indexOf("Mac")&&0>navigator.distVersion.indexOf("Mobile")&&(a.name="Mac");-1!=navigator.distVersion.indexOf("Linux")&&(a.name="Linux");/Mac OS X/.test(nAgt)&&!/Mobile/.test(nAgt)&&(a.version=/Mac OS X (10[\.\_\d]+)/.exec(nAgt)[1],a.version=a.version.replace(/_/g,".").substring(0,5));/Windows/.test(nAgt)&&(a.version="Unknown.Unknown");/Windows NT 5.1/.test(nAgt)&&
 (a.version="5.1");/Windows NT 6.0/.test(nAgt)&&(a.version="6.0");/Windows NT 6.1/.test(nAgt)&&(a.version="6.1");/Windows NT 6.2/.test(nAgt)&&(a.version="6.2");/Windows NT 10.0/.test(nAgt)&&(a.version="10.0");/Linux/.test(nAgt)&&/Linux/.test(nAgt)&&(a.version="Unknown.Unknown");a.name=a.name.toLowerCase();a.major_version="Unknown";a.minor_version="Unknown";"Unknown.Unknown"!=a.version&&(a.major_version=parseFloat(a.version.split(".")[0]),a.minor_version=parseFloat(a.version.split(".")[1]));return a};
-jQuery.browser.os=getOS();jQuery.browser.hasTouch=isTouchSupported();jQuery.browser.name=navigator.appName;jQuery.browser.fullVersion=""+parseFloat(navigator.appVersion);jQuery.browser.majorVersion=parseInt(navigator.appVersion,10);var nameOffset,verOffset,ix;
+jQuery.browser.os=getOS();jQuery.browser.hasTouch=isTouchSupported();jQuery.browser.name=navigator.distName;jQuery.browser.fullVersion=""+parseFloat(navigator.distVersion);jQuery.browser.majorVersion=parseInt(navigator.distVersion,10);var nameOffset,verOffset,ix;
 if(-1!=(verOffset=nAgt.indexOf("Opera")))jQuery.browser.opera=!0,jQuery.browser.name="Opera",jQuery.browser.fullVersion=nAgt.substring(verOffset+6),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8));else if(-1!=(verOffset=nAgt.indexOf("OPR")))jQuery.browser.opera=!0,jQuery.browser.name="Opera",jQuery.browser.fullVersion=nAgt.substring(verOffset+4);else if(-1!=(verOffset=nAgt.indexOf("MSIE")))jQuery.browser.msie=!0,jQuery.browser.name="Microsoft Internet Explorer",
 		jQuery.browser.fullVersion=nAgt.substring(verOffset+5);else if(-1!=nAgt.indexOf("Trident")){jQuery.browser.msie=!0;jQuery.browser.name="Microsoft Internet Explorer";var start=nAgt.indexOf("rv:")+3,end=start+4;jQuery.browser.fullVersion=nAgt.substring(start,end)}else-1!=(verOffset=nAgt.indexOf("Edge"))?(jQuery.browser.edge=!0,jQuery.browser.name="Microsoft Edge",jQuery.browser.fullVersion=nAgt.substring(verOffset+5)):-1!=(verOffset=nAgt.indexOf("Chrome"))?(jQuery.browser.webkit=!0,jQuery.browser.chrome=
-		!0,jQuery.browser.name="Chrome",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1<nAgt.indexOf("mozilla/5.0")&&-1<nAgt.indexOf("android ")&&-1<nAgt.indexOf("applewebkit")&&!(-1<nAgt.indexOf("chrome"))?(verOffset=nAgt.indexOf("Chrome"),jQuery.browser.webkit=!0,jQuery.browser.androidStock=!0,jQuery.browser.name="androidStock",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1!=(verOffset=nAgt.indexOf("Safari"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name=
-		"Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("AppleWebkit"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name="Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("Firefox"))?(jQuery.browser.mozilla=
-		!0,jQuery.browser.name="Firefox",jQuery.browser.fullVersion=nAgt.substring(verOffset+8)):(nameOffset=nAgt.lastIndexOf(" ")+1)<(verOffset=nAgt.lastIndexOf("/"))&&(jQuery.browser.name=nAgt.substring(nameOffset,verOffset),jQuery.browser.fullVersion=nAgt.substring(verOffset+1),jQuery.browser.name.toLowerCase()==jQuery.browser.name.toUpperCase()&&(jQuery.browser.name=navigator.appName));
--1!=(ix=jQuery.browser.fullVersion.indexOf(";"))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));-1!=(ix=jQuery.browser.fullVersion.indexOf(" "))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));jQuery.browser.majorVersion=parseInt(""+jQuery.browser.fullVersion,10);isNaN(jQuery.browser.majorVersion)&&(jQuery.browser.fullVersion=""+parseFloat(navigator.appVersion),jQuery.browser.majorVersion=parseInt(navigator.appVersion,10));
+		!0,jQuery.browser.name="Chrome",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1<nAgt.indexOf("mozilla/5.0")&&-1<nAgt.indexOf("android ")&&-1<nAgt.indexOf("distlewebkit")&&!(-1<nAgt.indexOf("chrome"))?(verOffset=nAgt.indexOf("Chrome"),jQuery.browser.webkit=!0,jQuery.browser.androidStock=!0,jQuery.browser.name="androidStock",jQuery.browser.fullVersion=nAgt.substring(verOffset+7)):-1!=(verOffset=nAgt.indexOf("Safari"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name=
+		"Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("distleWebkit"))?(jQuery.browser.webkit=!0,jQuery.browser.safari=!0,jQuery.browser.name="Safari",jQuery.browser.fullVersion=nAgt.substring(verOffset+7),-1!=(verOffset=nAgt.indexOf("Version"))&&(jQuery.browser.fullVersion=nAgt.substring(verOffset+8))):-1!=(verOffset=nAgt.indexOf("Firefox"))?(jQuery.browser.mozilla=
+		!0,jQuery.browser.name="Firefox",jQuery.browser.fullVersion=nAgt.substring(verOffset+8)):(nameOffset=nAgt.lastIndexOf(" ")+1)<(verOffset=nAgt.lastIndexOf("/"))&&(jQuery.browser.name=nAgt.substring(nameOffset,verOffset),jQuery.browser.fullVersion=nAgt.substring(verOffset+1),jQuery.browser.name.toLowerCase()==jQuery.browser.name.toUpperCase()&&(jQuery.browser.name=navigator.distName));
+-1!=(ix=jQuery.browser.fullVersion.indexOf(";"))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));-1!=(ix=jQuery.browser.fullVersion.indexOf(" "))&&(jQuery.browser.fullVersion=jQuery.browser.fullVersion.substring(0,ix));jQuery.browser.majorVersion=parseInt(""+jQuery.browser.fullVersion,10);isNaN(jQuery.browser.majorVersion)&&(jQuery.browser.fullVersion=""+parseFloat(navigator.distVersion),jQuery.browser.majorVersion=parseInt(navigator.distVersion,10));
 jQuery.browser.version=jQuery.browser.majorVersion;jQuery.browser.android=/Android/i.test(nAgt);jQuery.browser.blackberry=/BlackBerry|BB|PlayBook/i.test(nAgt);jQuery.browser.ios=/iPhone|iPad|iPod|webOS/i.test(nAgt);jQuery.browser.operaMobile=/Opera Mini/i.test(nAgt);jQuery.browser.windowsMobile=/IEMobile|Windows Phone/i.test(nAgt);jQuery.browser.kindle=/Kindle|Silk/i.test(nAgt);
 jQuery.browser.mobile=jQuery.browser.android||jQuery.browser.blackberry||jQuery.browser.ios||jQuery.browser.windowsMobile||jQuery.browser.operaMobile||jQuery.browser.kindle;jQuery.isMobile=jQuery.browser.mobile;jQuery.isTablet=jQuery.browser.mobile&&765<jQuery(window).width();jQuery.isAndroidDefault=jQuery.browser.android&&!/chrome/i.test(nAgt);jQuery.mbBrowser=jQuery.browser;
 jQuery.browser.versionCompare=function(a,e){if("stringstring"!=typeof a+typeof e)return!1;for(var c=a.split("."),d=e.split("."),b=0,f=Math.max(c.length,d.length);b<f;b++){if(c[b]&&!d[b]&&0<parseInt(c[b])||parseInt(c[b])>parseInt(d[b]))return 1;if(d[b]&&!c[b]&&0<parseInt(d[b])||parseInt(c[b])<parseInt(d[b]))return-1}return 0};
