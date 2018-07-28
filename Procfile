@@ -1,1 +1,1 @@
-web: node ./node_modules/.bin/gulp gulpfile.js
+web: node gulpfile.js
