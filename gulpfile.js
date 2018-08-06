@@ -18,17 +18,14 @@ const inlinesource = require('gulp-inline-source');
 const htmlmin = require('gulp-htmlmin');
 const gulpSequence = require('gulp-sequence');
 const express = require('express');
-const dist = express();
-const favicon = require("serve-favicon");
-var porta = process.env.PORT || 5000;
 
 
 
-gulp.task('express', function(){
-    dist.use(express.static(__dirname + './'));
-    dist.use(favicon(__dirname + "/dist/img/favicon.ico"));
-    dist.listen(porta);
-});
+// gulp.task('express', function(){
+//     dist.use(express.static(__dirname + './'));
+//     dist.use(favicon(__dirname + "/dist/img/favicon.ico"));
+//     dist.listen(porta);
+// });
 
 // dist.get('/', function (req, res) {
 //     res.render('dist/index');
@@ -44,6 +41,11 @@ gulp.task('express', function(){
  gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'express'));
 
 /*------------------  Tarefa Padrão  ---------------------*/
+
+gulp.task('default', ['clean'], function() {
+    gulp.start('spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'server');
+})
+
 
 gulp.task('copyfavicon', function() {
     return gulp.src('src/imgmin/favicon.jpg')
@@ -117,6 +119,13 @@ gulp.task('merge-js', function() {
         // .pipe(uglify())
 });
 
+gulp.task('server', function () {
+    var app = express()
+        .use(express.static(__dirname + '/dist/'))
+        .listen(process.env.PORT || 5000);
+    console.log('passou server...')
+});
+
 /*-------------------  HTML  ------------------*/
 
 gulp.task('html-replace', function() {
@@ -139,7 +148,7 @@ gulp.task('minify', function() {
 
 /*-------------------  Dev  -------------------*/
 
-gulp.task('server', function() {
+gulp.task('browserSync', function() {
     browserSync.init({
         server: {
             baseDir: 'src'
