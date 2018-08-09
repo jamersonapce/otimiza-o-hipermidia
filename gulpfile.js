@@ -1,93 +1,75 @@
+
+/*-----------------------  Variáveis  ----------------------*/
 const gulp = require('gulp');
-const imagemin = require('gulp-imagemin');
-const clean = require('gulp-clean');
-const concat = require('gulp-concat');
-const cleanCSS = require('gulp-clean-css');
-const htmlReplace = require('gulp-html-replace');
-const uglify = require('gulp-uglify');
-const cssmin = require('gulp-cssmin');
-const browserSync = require('browser-sync');
-const jshint = require('gulp-jshint');
-const jshintStylish = require('jshint-stylish');
-const csslint = require('gulp-csslint');
-const zip = require('gulp-zip');
-const sass = require('gulp-sass');
-const gulpif = require('gulp-if');
+const express = require('express');
 const spritesmith = require('gulp.spritesmith');
 const inlinesource = require('gulp-inline-source');
+const clean = require('gulp-clean');
+const imagemin = require('gulp-imagemin');
+const htmlReplace = require('gulp-html-replace');
 const htmlmin = require('gulp-htmlmin');
+const minify = require('minify');
+const gulpif = require('gulp-if');
+const zip = require('gulp-zip');
+const browserSync = require('browser-sync');
+const csslint = require('gulp-csslint');
+const jshint = require('gulp-jshint');
+const jshintStylish = require('jshint-stylish');
+const inject = require('gulp-inject');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
 const gulpSequence = require('gulp-sequence');
-const express = require('express');
+const sass = require('gulp-sass');
+const cssmin = require('gulp-cssmin');
+const merge = require('merge-stream');
 
+/*-----------------------  Default  ----------------------*/
 
+/* Tarefa padrão */
 
-// gulp.task('express', function(){
-//     dist.use(express.static(__dirname + './'));
-//     dist.use(favicon(__dirname + "/dist/img/favicon.ico"));
-//     dist.listen(porta);
-// });
+gulp.task('default', ['clean'], function(){
+    gulp.start(gulpSequence('spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify-html', 'express') );
+});
 
-// dist.get('/', function (req, res) {
-//     res.render('dist/index');
-// });
-//
-// dist.listen(dist.get('port'), function (){
-//     console.log('node is running', dist.get('port'));
-// });
+/* Clean */
+gulp.task('clean', function() {
+    return gulp.src(['dist', 'src/imgmin', 'src/sprite'])
+        .pipe(clean() );
+});
 
+/*---------------------- Copias --------------------------*/
 
-
-/*--------------Alias--------------*/
- gulp.task('default', gulpSequence('clean', 'spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'express'));
-
-/*------------------  Tarefa Padrão  ---------------------*/
-
-gulp.task('default', ['clean'], function() {
-    gulp.start('spritesmith', 'sass', 'copycss', 'copysprite', 'copyfavicon', 'inlinesource', 'minify', 'server');
-})
-
+gulp.task('copy',  function() {
+    gulp.start('copycss', 'copysprite', 'copyfavicon');
+});
 
 gulp.task('copyfavicon', function() {
     return gulp.src('src/imgmin/favicon.jpg')
         .pipe(gulp.dest('dist/img') );
-        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
 });
 
 gulp.task('copysprite', function() {
     return gulp.src('src/sprite/*.png')
         .pipe(gulp.dest('dist/sprite') );
-        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
 });
 
 gulp.task('copycss', function() {
     return gulp.src('src/css/*.css')
         .pipe(gulp.dest('dist/css') );
-        // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
 });
 
-gulp.task('copysrc', function() {
-    return gulp.src('src/**/*')
-        .pipe(gulp.dest('dist') );
-    // .pipe(gulp.src('src/sprite/sprite.png')).pipe(gulp.dest('dist/sprite/'));
-});
+/*-----------------------  Imagem  ----------------------*/
 
-gulp.task('clean', function() {
-    return gulp.src(['dist', 'src/imgmin', 'src/sprite'] )
-        .pipe(clean());
-});
-
-
-/*-----------------------  Imagens  -----------------------*/
-
-/* Sprite com css minificado*/
+/* Spritesmith*/
 gulp.task('spritesmith',['build-img'], function () {
     var spriteData = gulp.src('src/imgmin/*.png').pipe(spritesmith({
         imgName: '../sprite/sprite.png',
         cssName: 'sprite.scss',
         padding: 40
     }));
-    spriteData.img.pipe(gulp.dest('src/sprite'));
-    spriteData.css.pipe(gulpif('*.scss', gulp.dest('src/sass/sprites')) );
+    var imgStream = spriteData.img.pipe(gulp.dest('src/sprite'));
+    var cssStream = spriteData.css.pipe(gulpif('*.scss', gulp.dest('src/sass/sprites')) );
+    return merge(imgStream, cssStream);
 });
 
 /* Minificação de imagens */
@@ -95,7 +77,7 @@ gulp.task('build-img', function() {
     return gulp.src('src/img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('src/imgmin'));
-});
+});;
 
 /*-----------------------  CSS  ----------------------*/
 
@@ -107,48 +89,63 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('./src/css'))
 });
 
+/* Concatenação e minificação CSS */
+gulp.task('merge-css', function() {
+    gulp.src(['dist/css/normalize.min.css',
+        'dist/css/bootstrap.min.css',
+        'dist/css/global.css',
+        'dist/css/video.css',
+        'dist/css/section.css',
+        'dist/css/footer.css'])
+        .pipe(concat('site.min.css') )
+        .pipe(cleanCSS() )
+        .pipe(gulp.dest('dist/css') );
+});
+
 /*---------------  JavaScript  --------------*/
 
 /* Concatenação e minificação Js */
 gulp.task('merge-js', function() {
-    return gulp.src(['src/js/jquery-3.3.1.min.js',
-        'src/js/jquery.mb.YTPlayer.js',
-        'src/js/global.js'])
+    return gulp.src(['dist/js/jquery-3.3.1.min.js',
+        'dist/js/global.js'])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'));
-        // .pipe(uglify())
-});
-
-gulp.task('server', function () {
-    var app = express()
-        .use(express.static(__dirname + '/dist/'))
-        .listen(process.env.PORT || 5000);
-    console.log('passou server...')
 });
 
 /*-------------------  HTML  ------------------*/
 
-gulp.task('html-replace', function() {
-    return gulp.src('src/**/*.html')
-        .pipe(htmlReplace({js: 'js/script.js'}) )
-        .pipe(gulp.dest('dist') );
+/* Minify HTML */
+gulp.task('minify-html', function() {
+    gulp.src('dist/*.html')
+        .pipe(htmlmin({collapseWhitespace: true}))
+        .pipe(gulp.dest('dist'));
 });
 
+/* inlinesource */
 gulp.task('inlinesource', function () {
     return gulp.src('./src/*.html')
         .pipe(inlinesource())
         .pipe(gulp.dest('./dist'));
 });
 
-gulp.task('minify', function() {
-    return gulp.src('dist/*.html')
-        .pipe(htmlmin({collapseWhitespace: true}))
-        .pipe(gulp.dest('dist'));
+gulp.task('html-replace', function() {
+    return gulp.src('dist/**/*.html')
+        .pipe(inject( gulp.src('dist/css/**/sprite.css', {read: false})) )
+        .pipe(htmlReplace( {css:'css/site.min.css'}) )
+        .pipe(gulp.dest('dist') );
+});
+
+/*----------------- Servidor ------------------*/
+
+gulp.task('express', function(){
+    var app = express();
+    app.use(express.static(__dirname + '/dist/'));
+    app.listen(process.env.PORT || 5000);
 });
 
 /*-------------------  Dev  -------------------*/
 
-gulp.task('browserSync', function() {
+gulp.task('server', function() {
     browserSync.init({
         server: {
             baseDir: 'src'
